@@ -6,28 +6,36 @@ Simple configurations I use on my daily driver
 
 ## What even is this?
 
-All my suckless programs have luke smith's builds as their base, dwm has been patched a bit and the source code has been altered quite a bit, especially with certain functions and parts from MentalOutlaw's build which has fixed it for me a few times. Another person I must thank is siduck because his build of dwm (github.com/siduck/chadwm) gave me lots of ideas like the colorfultag patch and the bar/statuspadding patches which really helped my dwm take off. Other than dwm, st/dmenu and dwmblocks are pretty much just how I got them with a couple of things changed like the colors/modules and I defined a little variable in dwmblocks so I don't have to flood /usr/local/bin/ with scripts. Any xresources/xrdb patches have been pretty much removed and StickyTags or whatever have been turned useless.
+All my suckless programs have luke smith's builds as their base, dwm has been patched a bit and the source code has been altered quite a bit, especially with certain functions and parts from MentalOutlaw's build which has fixed it for me a few times. Another person I must thank is siduck because his build of dwm (github.com/siduck/chadwm) gave me lots of ideas like the colorfultag patch and the bar/statuspadding patches which really helped my dwm take off. Other than dwm, st/dmenu and dwmblocks are pretty much just how I got them with a couple of things changed like the colors/modules and I defined a little variable in dwmblocks so I don't have to flood /usr/local/bin/ with scripts. I wanted this build to be light, quick and not too bloaty, things like sticky/scratchy and whatever patches have been removed, just like xresources/clickable statusbar and anything that has to do with dwmblocks/shiftview, although this might be added soon enough/hide vacant tags etc.
 
 ## Patches applied
 
-I applied the following patches to DWM:
+I applied the following patches to dwm:
 
 - statuspadding
 - barpadding
 - colorfultag patch (https://github.com/fitrh/dwm/issues/1 and siduck's chadwm)
 - preserveonrestart patch
-- Most of the patches that came with Luke Smith's build like vanitygaps and the many many layouts
+- swallow patch
+- True Fullscreen
+- vanity gaps
+- Layouts, of which not all work but well, good enough
 - notitle
 - underline tags
 - status2d
 
+St/Dmenu and Dwmblocks have the patches they came with -xresources
+
+I tried to keep dwm minimal, stylish and useful, without having 70 patches on it.
+
+*All Of these programs have colored emoji support, you simply have to install an adequate font.*
+
 ### Requirements
 
-- imlib2
+- imlib2 if you use nsxiv and Xinerama for suckless
 - any font patched with nerd font symbols, only reason I use a nerd font is for the arch logo and the cooler retro cpu character. You can get away with font-awesome
-- the bar needs xsetroot
+- xsetroot
 - other scripts could need acpi etc
-- movie script needs 2 programs for downloading the movie and the subtitle (if asked to)
 
 ## Other configurations
 
@@ -61,8 +69,7 @@ To run dwm simply use my .xinitrc script or append "exec dwm" to yours after com
 
 ## Possible Improvements
 
-- Make as many appplications transparent
-- Make transparent applications and the terminal blurry
-- rounded corners on all windows, pretty sure this build has it if you disable the border px to 0
-- give dwmblocks on the bar in general some color, I have tried to do so and it just doesn't work, my tags are already colorful so I just don't know what's going on, you could try something like luastatus or slstatus but they aren't as customizable and I don't care if my stats are a second behind.
-- init.vim to init.lua from scratch, only improvement I am even considering to try out.
+- Make as many appplications transparent and/or blurry, including the terminal. Not sure how feasible this is with none-zoomer terminals but it could improve this setup
+- rounded corners on all windows, pretty sure this build has it if you disable the border px to 0 and enable picom
+- give dwmblocks and the bar some color, I have tried to do so and it just doesn't work, my tags are already colorful so I just don't know what's going on, you could try something like luastatus or slstatus but I barely know how to echo my name on these languages and the community doesn't seem to be so eager to create different modules. Furthermore, tweaking these modules to display the way you want to is simply a headache by itself and in the end, I do not care if my stats are a second behind
+- init.vim to init.lua from scratch, only improvement I am even considering to try out, I would like to do this so I could use the blankline-indent plugin to its fullest and decore it with gruvbox-themed colors, also, lua simply runs faster. At least for me and my setup. NvChad is around 75% faster than my vimscript config, and it literally has 30 plugins on. So, I think it is worth giving it a shot
