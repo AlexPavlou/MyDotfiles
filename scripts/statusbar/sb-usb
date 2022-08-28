@@ -1,0 +1,7 @@
+usb1=$(lsblk -la | awk '/sdc1/ { print $1 }')
+	usb1mounted=$(lsblk -la | awk '/sdc1/ { print $7 }')
+		if [ -z "$usb1mounted" ]; then
+			echo "  $usb1"
+		else
+			echo " "
+		fi
