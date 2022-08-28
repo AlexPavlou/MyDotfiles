@@ -47,7 +47,7 @@ I applied the following patches to DWM:
 - newsboat
 - nsxiv, control+x and then control-d deletes the current image, or well, moves it to ~/.trash
 - nvim, gruvbox colors, nice indenting, completion, lualine, web-devicons and colorizer. I wish to convert to init.lua but for now this config does everything I want it to.
-- zathura, just a black background and the basic bindings.
+- zathura, just a dark background and the basic bindings.
 
 ## Current Issues
 
