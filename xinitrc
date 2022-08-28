@@ -1,5 +1,5 @@
 xrandr --output  Virtual1 --mode 1360x768 &
-setbg &
+./.scripts/setbg &
 dwmblocks &
 xset r rate 300 50 &
 
