@@ -6,7 +6,7 @@ Simple configurations I use on my daily driver
 
 ## What even is this?
 
-All my suckless programs have luke smith's builds as their base, dwm has been patched a bit and the source code has been altered quite a bit, especially with certain functions and parts from MentalOutlaw's build which has fixed it for me a few times. Another person I must thank is siduck because his build of dwm (github.com/siduck/chadwm) gave me lots of ideas like the colorfultag patch and the bar/statuspadding patches. Other than dwm, st/dmenu and dwmblocks are pretty much just how I got them with a couple of things changed like the colors/modules and I defined a little variable in dwmblocks so I don't have to flood /usr/local/bin/ with scripts. Any xresources/xrdb patches have been pretty much removed and StickyTags or whatever have been turned useless.
+All my suckless programs have luke smith's builds as their base, dwm has been patched a bit and the source code has been altered quite a bit, especially with certain functions and parts from MentalOutlaw's build which has fixed it for me a few times. Another person I must thank is siduck because his build of dwm (github.com/siduck/chadwm) gave me lots of ideas like the colorfultag patch and the bar/statuspadding patches which really helped my dwm take off. Other than dwm, st/dmenu and dwmblocks are pretty much just how I got them with a couple of things changed like the colors/modules and I defined a little variable in dwmblocks so I don't have to flood /usr/local/bin/ with scripts. Any xresources/xrdb patches have been pretty much removed and StickyTags or whatever have been turned useless.
 
 ## Patches applied
 
@@ -19,12 +19,12 @@ I applied the following patches to DWM:
 - Most of the patches that came with Luke Smith's build like vanitygaps and the many many layouts
 - notitle
 - underline tags
-- status3d
+- status2d
 
 ### Requirements
 
 - imlib2
-- any font patched with nerd font symbols
+- any font patched with nerd font symbols, only reason I use a nerd font is for the arch logo and the cooler retro cpu character. You can get away with font-awesome
 - the bar needs xsetroot
 - other scripts could need acpi etc
 - movie script needs 2 programs for downloading the movie and the subtitle (if asked to)
@@ -45,7 +45,7 @@ I applied the following patches to DWM:
 - mpv, simple enough, it doesn't lag and plays nicely + resumes any videos
 - ncmpcpp, nothing crazy, just luke smith's with vim bindings
 - newsboat
-- nsxiv, control+x and the control-d deletes the current image, or well, moves it to ~/.trash
+- nsxiv, control+x and then control-d deletes the current image, or well, moves it to ~/.trash
 - nvim, gruvbox colors, nice indenting, completion, lualine, web-devicons and colorizer. I wish to convert to init.lua but for now this config does everything I want it to.
 - zathura, just a black background and the basic bindings.
 
