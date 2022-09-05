@@ -17,6 +17,7 @@ I applied the following patches to dwm:
 - colorfultag patch (https://github.com/fitrh/dwm/issues/1 and siduck's chadwm), **you don't like it you can easily remove it**
 - preserveonrestart patch, just so you can refresh dwm without all windows spawning on tag1
 - swallow patch, whenever you open a gui program from the terminal, it swallows it, meaning that the terminal disappears and when you close that program it appears again, very useful for using nsxiv etc.
+- Column patch, can't really find this one again but it makes the master and slave windows the same size
 - True Fullscreen, alt-F makes the window as big as the whole screen
 - shiftview, not really a patch but alt-g does the trick
 - vanity gaps, gaps, consistent through different layouts
@@ -69,7 +70,7 @@ To run dwm simply use my .xinitrc script or append "exec dwm" to yours after com
 
 ## Possible Improvements
 
-- Make as many appplications transparent and/or blurry, including the terminal. Not sure how feasible this is with the simple terminal but it could improve this setup
-- rounded corners on all windows, pretty sure this build has it if you disable the border px to 0 and run a compositor like picom
-- give dwmblocks and the bar some color, I have tried to do so and it just doesn't work, my tags are already colorful so I just don't know what's going on, you could try something like luastatus or slstatus but I barely know how to echo my name on these languages and the community doesn't seem to be so eager to create different modules. Furthermore, tweaking these modules to display the way you want to is simply a headache by itself and in the end, I do not care if my stats are a second behind
-- init.vim to init.lua from scratch, only improvement I am even considering to try out, I would like to do this so I could use the blankline-indent plugin to its fullest and decore it with gruvbox-themed colors, also, lua simply runs faster. At least for me and my setup. NvChad is around 75% faster than my vimscript config, and it literally has 30 plugins on. So, I think it's worth giving it a shot
+- [ ] Make as many appplications transparent and/or blurry, including the terminal. Not sure how feasible this is with the simple terminal but it could improve this setup
+- [ ] Rounded corners on all windows, pretty sure this build has it if you disable the border px to 0 and run a compositor like picom
+- [ ] Give dwmblocks and the bar some color, I have tried to do so and it just doesn't work, my tags are already colorful so I just don't know what's going on, you could try something like luastatus or slstatus but I barely know how to echo my name on these languages and the community doesn't seem to be so eager to create different modules. Furthermore, tweaking these modules to display the way you want to is simply a headache by itself and in the end, I do not care if my stats are a second behind
+- [?] init.vim to init.lua from scratch, only improvement I am even considering to try out, I would like to do this so I could use the blankline-indent plugin to its fullest and decore it with gruvbox-themed colors, also, lua simply runs faster. At least for me and my setup. NvChad is around 75% faster than my vimscript config, and it literally has 30 plugins on. So, I think it's worth giving it a shot
