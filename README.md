@@ -6,27 +6,28 @@ Simple configurations I use on my daily driver
 
 ## What even is this?
 
-All my suckless programs have luke smith's builds as their base, but the source code has been altered quite a bit, since I removed some patches and added a few, I made several additions to the source with bits from Mental Outlaw's build which really saved me a few times. Another person I must thank is siduck because his build of dwm (github.com/siduck/chadwm) gave me lots of ideas like the colorfultag patch and the bar/statuspadding patches which really helped my dwm take off. Other than dwm, st, dmenu and dwmblocks are pretty much just how I got them with a couple of things changed or added to them, like the colors/modules and a little variable I defined for dwmblocks so I don't have to flood /usr/local/bin/ with scripts. I tried to keep dwm minimal, stylish and useful, without having 70 patches on it. Things like sticky/scratchy or whatever you call them patches have been removed, just like xresources/clickable statusbar and anything that has to do with dwmblocks/shiftview/hide vacant tags etc.
+All my suckless programs have luke smith's builds as their base, but the source code has been altered quite a bit, since I removed some patches and added a few, I made several additions to the source with bits from Mental Outlaw's build which really saved me a few times. Another person I must thank is siduck because his build of dwm (github.com/siduck/chadwm) gave me lots of ideas like the colorfultag patch and the bar/statuspadding patches which really helped my dwm take off. Other than dwm, st, dmenu and dwmblocks are pretty much just how I got them with a couple of things changed or added to them, like the colors/modules and a little variable I defined for dwmblocks so I don't have to flood /usr/local/bin/ with scripts. I tried to keep dwm minimal, stylish and useful, without having 70 patches on it. Things like sticky/scratchy or whatever you call them patches have been removed, just like xresources/clickable statusbar and anything that has to do with dwmblocks/hide vacant tags etc.
 
 ## Patches applied
 
 I applied the following patches to dwm:
 
-- statuspadding
-- barpadding
-- colorfultag patch (https://github.com/fitrh/dwm/issues/1 and siduck's chadwm)
-- preserveonrestart patch
-- swallow patch
-- True Fullscreen
-- vanity gaps
-- Layouts, of which not all work but well, good enough
-- notitle
-- underline tags
-- status2d
+- statuspadding, determines the padding between the edge and the content for the statusbar
+- barpadding, makes the statusbar float
+- colorfultag patch (https://github.com/fitrh/dwm/issues/1 and siduck's chadwm), **you don't like it you can easily remove it**
+- preserveonrestart patch, just so you can refresh dwm without all windows spawning on tag1
+- swallow patch, whenever you open a gui program from the terminal, it swallows it, meaning that the terminal disappears and when you close that program it appears again, very useful for using nsxiv etc.
+- True Fullscreen, alt-F makes the window as big as the whole screen
+- shiftview, not really a patch but alt-g does the trick
+- vanity gaps, gaps, consistent through different layouts
+- Layouts
+- notitle, windows have no title on the bar, **this is also easily removable**, like all patches really..
+- underline tags, tags in use have a little bar beneath them, looks good
+- status2d, allows for a colored bar, the tags use it
 
 St/Dmenu and Dwmblocks have the patches they came with -xresources
 
-*All Of these programs have colored emoji support, you simply have to install an adequate font.*
+*All Of these programs have colored emoji support, you simply have to install an adequate font and tell them to use it.*
 
 ### Requirements
 
