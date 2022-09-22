@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "What's the name of the movie?"
+read moviename
+echo "What language should the subtitles be?"
+read sublang
+subberthehut -O $moviename -l $sublang
+torrentflix
