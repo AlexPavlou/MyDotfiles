@@ -1,8 +1,0 @@
-var=$(pacman -Qu | grep -Fcv "[ignored]" )
-if [ $var -gt 0 ]
-then
-echo " $var1"
-else
-echo " "
-fi
-
