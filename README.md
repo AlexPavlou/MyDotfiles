@@ -19,7 +19,7 @@ I applied the following patches to dwm:
 
 - statuspadding, determines the padding between the edge and the content for the statusbar
 - barpadding, makes the statusbar float
-- colorfultag patch (https://github.com/fitrh/dwm/issues/1 and siduck's chadwm), **you don't like it you can easily remove it**
+- colorfultag patch (https://github.com/fitrh/dwm/issues/1 and siduck's chadwm), *This, like most patches can be easily removed and of course you can tweak everything about this around*
 - preserveonrestart patch, just so you can refresh dwm without all windows spawning on tag1
 - swallow patch, whenever you open a gui program from the terminal, it swallows it, meaning that the terminal disappears and when you close that program it appears again, very useful for using nsxiv etc.
 - Column patch, can't really find this one again but it makes the master and slave windows the same size
@@ -27,7 +27,7 @@ I applied the following patches to dwm:
 - shiftview, not really a patch but alt-g does the trick
 - vanity gaps, gaps, consistent through different layouts
 - Layouts
-- notitle, windows have no title on the bar, **this is also easily removable**, like all patches really..
+- notitle, windows have no title on the bar, *also easily removable*
 - underline tags, tags in use have a little bar beneath them, looks good
 - status2d, allows for a colored bar, the tags use it
 
@@ -50,7 +50,7 @@ St/Dmenu and Dwmblocks have the patches they came with -xresources
 - all I care about from the /etc/default/grub like the kernel params, which make booting up a little quicker and much quieter
 - some wallpapers I found while ricing at r/unixporn that just look amazing, perhaps not the best quality but you can search for the original images
 - a couple dozen scripts, both for dwmblocks and other useful ones. Most come from Luke Smith but I have written and edited a few
-- My config for firefox (simply Arkenfox with a user-override.js from [here](ttps://www.youtube.com/watch?v=GVOcElOPs8E))
+- My config for firefox (simply Arkenfox with a user-override.js from [here](https://www.youtube.com/watch?v=GVOcElOPs8E))
 - Cava, with gruvbox colors
 - dunst, no other dunstrc worked as well so yeah, good enough
 - iptables, which is still under work and not even sure if I will use it
