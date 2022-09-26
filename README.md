@@ -8,6 +8,9 @@ Simple configurations I use on my daily driver
 
 ![blurred-etc-image](images/with_blur.png)
 
+#### Update 2:
+
+![colored-bar-update-image](images/colored-bar-and-kawaii.png)
 
 ## What even is this?
 
@@ -26,10 +29,10 @@ I applied the following patches to dwm:
 - True Fullscreen, alt-F makes the window as big as the whole screen
 - shiftview, not really a patch but alt-g does the trick
 - vanity gaps, gaps, consistent through different layouts
-- Layouts
+- Layouts (needs some work)
 - notitle, windows have no title on the bar, *also easily removable*
 - underline tags, tags in use have a little bar beneath them, looks good
-- status2d, allows for a colored bar, the tags use it
+- status2d, allows for a colored bar, the tags, as well as slsatus use it
 
 St/Dmenu and Dwmblocks have the patches they came with -xresources
 
@@ -52,6 +55,7 @@ St/Dmenu and Dwmblocks have the patches they came with -xresources
 - a couple dozen scripts, both for dwmblocks and other useful ones. Most come from Luke Smith but I have written and edited a few
 - My config for firefox (simply Arkenfox with a user-override.js from [here](https://www.youtube.com/watch?v=GVOcElOPs8E))
 - Cava, with gruvbox colors
+- Slstatus, the suckless status monitor, looks stlish and doesn't take 4 seconds to load, if you want to add colors to some unicode character and then change the colors for the information, it is a huge pain (can only really have like 4 functions on), but for something nice and simple it works very well. 
 - dunst, no other dunstrc worked as well so yeah, good enough
 - iptables, which is still under work and not even sure if I will use it
 - lf, Luke Smith's config with lfimg scripts etc. (cirala/lfimg)
@@ -66,7 +70,7 @@ St/Dmenu and Dwmblocks have the patches they came with -xresources
 
 ## Current Issues
 
-- None
+- Layouts are messed up
 
 ## Usage
 
@@ -78,5 +82,5 @@ To run dwm simply use my .xinitrc script or append "exec dwm" to yours after com
 
 - [x] Make as many appplications transparent and/or blurry, including the terminal. Not sure how feasible this is with the simple terminal but it could improve this setup
 - [x] Rounded corners on all windows, pretty sure this build has it if you disable the border px to 0 and run a compositor like picom
-- [ ] Give dwmblocks and the bar some color, I have tried to do so and it just doesn't work, my tags are already colorful so I just don't know what's going on, you could try something like luastatus or slstatus but I barely know how to echo my name on these languages and the community doesn't seem to be so eager to create different modules. Furthermore, tweaking these modules to display the way you want to is simply a headache by itself and in the end, I do not care if my stats are 200ms behind
-- [ ] init.vim to init.lua from scratch, only improvement I am even considering to try out, I would like to do this so I could use the blankline-indent plugin to its fullest and decore it with gruvbox-themed colors, also, lua simply runs faster. At least for me and my setup. NvChad is around 75% faster than my vimscript config, and it literally has 30 plugins on. So, I think it's worth giving it a shot
+- [x] Give dwmblocks and the bar some color, ~~ I have tried to do so and it just doesn't work, my tags are already colorful so I just don't know what's going on, you could try something like luastatus or slstatus but I barely know how to echo my name on these languages and the community doesn't seem to be so eager to create different modules. Furthermore, tweaking these modules to display the way you want to is simply a headache by itself and in the end, I do not care if my stats are 200ms behind ~~, applied status2d manually and it worked great, this improvement was made
+- [ ] init.vim to init.lua from scratch
