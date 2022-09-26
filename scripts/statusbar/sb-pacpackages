@@ -1,0 +1,8 @@
+packages=$(yay -Qu | grep -Fcv "[ignored]" )
+if [ $packages -gt 0 ]
+then
+echo " $packages"
+else
+echo " "
+fi
+

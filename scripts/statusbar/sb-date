@@ -1,0 +1,1 @@
+printf "^b#d55d0e^^c#1d2021^^b#fd8019^ $(date -u "+%a, %d %b") ^d^"
