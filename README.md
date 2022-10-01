@@ -1,8 +1,8 @@
 # MyDotfiles
 Simple configurations I use on my daily driver
 
-![image1](images/pic.png)
-![image2](images/neofetch_pic.png)
+![image1](images/pic.jpg)
+![image2](images/neofetch_pic.jpg)
 
 ## What even is this?
 
@@ -50,7 +50,7 @@ slstatus comes as it is and dwmblocks is purely luke smith's build with a new va
 
 ## Other configurations
 
-- zsh with zsh plugins, zshrc and zprofile
+- alacritty, Very simple config file, I just set the colors to match the rest of my setup and the font/font size
 - my startup script with xinit
 - all I care about from the /etc/default/grub like the kernel params, which make booting up a little quicker and much quieter
 - some wallpapers I found while ricing at r/unixporn that just look amazing, perhaps not the best quality but you can search for the original images
@@ -69,6 +69,7 @@ slstatus comes as it is and dwmblocks is purely luke smith's build with a new va
 - nvim, gruvbox colors, nice indenting, completion, lualine, web-devicons and colorizer. I wish to convert to init.lua but for now this config does everything I want it to
 - picom, animations/blurred/transparent/rounded corners, dim-inactive, opacity-inactive and active. It looks nice and feels even better. you should use a picom fork that offers animations, like [picom-animations-git yay](https://aur.archlinux.org/packages/picom-animations-git)
 - zathura, just a dark background and the basic bindings.
+- zsh with zsh plugins, zshrc and zprofile
 
 ## Current Issues
 
