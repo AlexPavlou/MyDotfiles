@@ -1,0 +1,20 @@
+
+/*         ___    __                                   ___           */
+/*        /\_ \  /\ \__                              /'___\ __       */
+/*  __  __\//\ \ \ \ ,_\  _ __    __     _ __   ___ /\ \__//\_\      */
+/* /\ \/\ \ \ \ \ \ \ \/ /\`'__\/'__`\  /\`'__\/ __`\ \ ,__\/\ \     */
+/* \ \ \_\ \ \_\ \_\ \ \_\ \ \//\ \L\.\_\ \ \//\ \L\ \ \ \_/\ \ \    */
+/*  \ \____/ /\____\\ \__\\ \_\\ \__/.\_\\ \_\\ \____/\ \_\  \ \_\   */
+/*   \/___/  \/____/ \/__/ \/_/ \/__/\/_/ \/_/ \/___/  \/_/   \/_/   */
+
+configuration {
+	modi: 			"drun,run";
+	lines: 			13;
+	font: 			"Iosevka 10";
+	show-match: 		false;
+	separator-style: 	"solid";
+	hide-scrollbar: 	true;
+	show-icons: 		true;
+}
+//@theme "/home/alex/.config/rofi/themes/spotlight-dark.rasi"
+@theme "/home/alex/.config/rofi/themes/ultratheme.rasi"
