@@ -1,22 +1,18 @@
 # MyDotfiles
 Simple configurations I use on my daily driver
 
-![image1](images/pic1.jpg)
-![image2](images/pic2.jpg)
-
-### Update:
-
-![blurred-etc-image](images/with_blur.png)
-
-#### Update 2:
-
-![colored-bar-update-image](images/colored-bar-and-kawaii.png)
+![image1](images/pic.png)
+![image2](images/neofetch_pic.png)
 
 ## What even is this?
 
-All my suckless programs have luke smith's builds as their base, but the source code has been altered quite a bit, since I removed some patches and added a few, I made several additions to the source with bits from Mental Outlaw's build which really saved me a few times. Another person I must thank is siduck because his build of dwm (github.com/siduck/chadwm) gave me lots of ideas like the colorfultag patch and the bar/statuspadding patches which really helped my dwm take off. Other than dwm, st, dmenu and dwmblocks are pretty much just how I got them with a couple of things changed or added to them, like the colors/modules and a little variable I defined for dwmblocks so I don't have to flood /usr/local/bin/ with scripts. I tried to keep dwm minimal, stylish and useful, without having 70 patches on it. Things like sticky/scratchy or whatever you call them patches have been removed, just like xresources/clickable statusbar and anything that has to do with dwmblocks/hide vacant tags etc.
+Most of the suckless utilities I provide a custom build of have been based upon Luke Smith's. I have done several additions and alterations to the source code, adding and removing several patches, it is a fun journey, that of 'ricing' your DE/WM and getting it to look nice and tailor it to your standards, but of course, I could have never done this on my own, people I must  give some credit to are Siduck (siduck/chadwm) which brought the colorfultag patch and other useful patches to my attention, Mental Outlaw since I sometimes used parts of his source in dwm, as well as many, many people that I just don't remember. I tried to keep these programs and configs fairly minimal while still looking nice and being useful.
+
+Other than dwm, st, dmenu and dwmblocks are pretty much just how I got them with a couple of things changed or added to them, like the colors/modules and a little variable I defined for dwmblocks so I don't have to flood /usr/local/bin/ with scripts. I tried to keep dwm minimal, stylish and useful, without having 70 patches on it. Things like sticky/scratchy or whatever you call them patches have been removed, just like xresources/clickable statusbar and anything that has to do with dwmblocks/hide vacant tags etc.
 
 ## Patches applied
+
+In general, I 
 
 I applied the following patches to dwm:
 
