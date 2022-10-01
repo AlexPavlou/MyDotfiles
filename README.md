@@ -6,19 +6,19 @@ Simple configurations I use on my daily driver
 
 ## What even is this?
 
-Most of the suckless utilities I provide a custom build of have been based upon Luke Smith's, except for slstatus. I have done several additions and alterations to the source code, adding and removing several patches, it is a fun journey, that of 'ricing' your DE/WM and getting it to look nice and tailor it to your standards, but of course, I could have never done this on my own, people I must  give some credit to are Siduck (siduck/chadwm) which brought the colorfultag patch and other useful patches to my attention, Mental Outlaw since I sometimes used parts of his source in dwm, as well as many, many people that I just don't remember. I tried to keep these programs and configs fairly minimal while still looking nice and being useful
+Most of the suckless utilities I provide a custom build of have been based upon Luke Smith's, except for slstatus. I have made several additions and alterations to the source code, adding and removing patches, it is a fun journey, that of 'ricing' your DE/WM and getting it to look nice and tailoring it to your standards, but of course, I could have never done this on my own, people I must  give some credit to are Siduck (siduck/chadwm) which brought the colorfultag patch and other useful patches to my attention, Mental Outlaw since I sometimes used parts of his source in dwm, as well as many, many people that I just don't remember. I tried to keep these programs and configs fairly minimal while still looking nice and being useful
 
 ## Patches applied
 
 I applied the following patches to dwm:
 
-- statuspadding, determines the padding between the edge and the content for the statusbar
+- statuspadding, determines the padding between the edge and the content of the statusbar
 - barpadding, makes the statusbar float
-- colorfultag patch (https://github.com/fitrh/dwm/issues/1 and siduck's chadwm),
+- colorfultag patch (https://github.com/fitrh/dwm/issues/1 and siduck's chadwm), gives the tags some colour
 - preserveonrestart patch, just so you can refresh dwm without all windows spawning on the first tag
 - swallow patch, whenever you open a gui program from the terminal, it swallows it, meaning that the terminal disappears and the program appears, when you close the program, the terminal once again appears
 - column patch, makes two windows the same size
-- true Fullscreen, alt-F makes the window as big as the whole screen
+- true fullscreen, alt-F makes the window as big as the whole screen
 - shiftview, not really a patch but you can cycle through any tags in use by running with alt-; or alt-g
 - vanity gaps, gaps and layouts, currently: tile, bstack, spiral, dwindle, deck, centeredmaster and centeredfloatingmaster
 - notitle, windows have no title on the bar
@@ -31,8 +31,8 @@ And the following patches were removed:
 - xresources
 - scratchpad
 - stacker
-- hide Vacant Tags
-- sticky Tags
+- hide vacant tags
+- sticky tags
 
 st is luke smith's without the xresources patch, it comes with ligature support and the boxdraw patch
 
@@ -40,11 +40,11 @@ dmenu, which I don't currently use, is luke smith's build without the xresources
 
 slstatus comes as it is and dwmblocks is purely luke smith's build with a new variable I defined so you don't have to flood your PATH with all these scripts
 
-* All the patches previously mentioned can be added back or removed quite easily, and they all support colored emoji characters, you simply need to install an adequate font *
+*All the patches previously mentioned can be added back or removed quite easily, and they all support colored emoji characters, you simply need to install an adequate font*
 
 ### Requirements
 
-- imlib2  for nsxiv
+- imlib2 for nsxiv
 - Xinerama for dwm
 - any font patched that is patched with the nerd font symbols, only reason I use a nerd fonts is for the arch logo and the cooler retro cpu character, you can get away with font-awesome
 
@@ -82,4 +82,5 @@ To run dwm simply use my .xinitrc script or append "exec dwm" to yours after com
 
 - [x] Make as many appplications transparent and/or blurry, including the terminal. Not sure how feasible this is with the simple terminal but it could improve this setup
 - [x] Rounded corners on all windows, pretty sure this build has it if you disable the border px to 0 and run a compositor like picom
-- [x] Give dwmblocks and the bar some color, ~~ I have tried to do so and it just doesn't work, my tags are already colorful so I just don't know what's going on, you could try something like luastatus or slstatus but I barely know how to echo my name on these languages and the community doesn't seem to be so eager to create different modules. Furthermore, tweaking these modules to display the way you want to is simply a headache by itself and in the end, I do not care if my stats are 200ms behind ~~, applied status2d manually and it worked great, this improvement was made
+- [x] Give dwmblocks and the bar some color
+- [x] init.vim to init.lua, *mostly done*. Only way I managed to do this is via NvChad or other distributions that come ready, but as you can see on /images/{lua.png,vimscript.png}, the difference is that of 5ms when booting into vim 100 times. Lua is a fun language to learn and perhaps useful in the future as more software is written with it or at least with it in mind, but for now I see no reason to switch over to init.lua. It is quite a pain to bridge the gap when you know nothing about lua and such a minimal performance gain on modern hardware is not worth days and days of my life, learning a bit of lua is surely worth it though
