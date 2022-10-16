@@ -1,11 +1,32 @@
 window:
-   opacity: 0.9
 
 font:
   normal:
-    family: Iosevka
+    family: iosevka
+    style: iosevka-medium
+  bold:
+    family: iosevka
+    style: iosevka-bold
+  italic:
+    family: iosevka
+    style: iosevka-italic
+  bold_italic:
+    family: iosevka
+    style: iosevka-bolditalic
 
-size: 15.0
+draw_bold_text_with_bright_colors: true
+
+size: 15
+
+window:
+   opacity: 0.92
+   padding:
+    x: 7
+    y: 5
+
+use_thin_strokes: true
+custom_cursor_colors: true
+
 
 # gruvbox Alacritty Colors
 colors:
@@ -13,6 +34,10 @@ colors:
   primary:
     background: '0x1d2021'
     foreground: '0xd4be98'
+
+  cursor:
+    text: '0xffffff'
+    cursor: '0x4d4d4c'
 
   # Normal colors
   normal:
@@ -39,3 +64,22 @@ colors:
   indexed_colors:
     - { index: 16, color: '0xe78a4e' }
     - { index: 17, color: '0xc14a4a' }
+
+shell:
+  program: /usr/bin/zsh
+
+bell:
+  animation: EaseOutExpo
+  color: '0xffffff'
+  duration: 0
+
+mouse:
+  hide_when_typing: true
+  unfocused_hollow: true
+
+key_bindings:
+  - { key: V,        mods: alt,       action: Paste                        }
+  - { key: C,        mods: alt,       action: Copy                         }
+  - { key: Equals,   mods: Command,       action: IncreaseFontSize             }
+  - { key: Minus,    mods: Command,       action: DecreaseFontSize             }
+  - { key: Minus,    mods: Command|Shift, action: ResetFontSize                }
