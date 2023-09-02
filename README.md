@@ -1,14 +1,48 @@
 # MyDotfiles
 Simple configurations I use on my daily driver
 
-![image1](images/pic.jpg)
-![image2](images/neofetch_pic.jpg)
+![image1](images/wayland.jpg)
+![image2](images/wayland2.jpg)
 
 ## What even is this?
 
-Most of the suckless utilities I provide a custom build of have been based upon Luke Smith's, except for slstatus. I have made several additions and alterations to the source code, adding and removing patches, it is a fun journey, that of 'ricing' your DE/WM and getting it to look nice and tailoring it to your standards, but of course, I could have never done this on my own, people I must  give some credit to are Siduck (siduck/chadwm) which brought the colorfultag patch and other useful patches to my attention, Mental Outlaw since I sometimes used parts of his source in dwm, as well as many, many people that I just don't remember. I tried to keep these programs and configs fairly minimal while still looking nice and being useful
+Through this repository I used to provide multiple custom builds of suckless programs, such as st, dwm or dmenu (all of these can still be found in /git/legacy/), these were mostly based upon Luke Smith's builds, except for slstatus. I had made several additions and alterations to the source code to match my taste and criteria on program minimality and functionality. Nowadays, after my transition to wayland, this repo hosts many of my personal configurations I use on wayland, like dwl, dwlb with slstatus etc.
 
-## Patches applied
+## Patches Applied
+
+I applied the following patches to dwl:
+
+- [https://github.com/djpohly/dwl/wiki/autostart](autostart patch), simple function to start apps after dwl is set up
+- [https://github.com/djpohly/dwl/wiki/keycodes](keycodes patch), makes it so that input is independent from keyboard layout
+- [https://github.com/djpohly/dwl/wiki/keymapnotify](keymapnotify patch), outputs current layout to /etc/dwl-keymap file, useful for showing your current layout on slstatus
+- [https://github.com/djpohly/dwl/wiki/monitorconfig](monitorconfig patch), adds more extensive monitor configuration in config.h
+- [https://github.com/djpohly/dwl/wiki/XF86keysym](XF86keysym patch), uses the /usr/include/X11/XF86keysym.h header file to change volume via the appropiate keys
+- [https://github.com/djpohly/dwl/wiki/xcursor](xcursor patch), adds xcursor functionality, meaning that it hides the cursor after x seconds of inactivity
+- [https://github.com/djpohly/dwl/wiki/vanitygaps](vanitygaps patch), adds gaps to windows
+
+dwlb comes as it is with parts of the bloat cut out, I removed all pointless functionality and only left -status-stdin and -status, as well as the ability to set the foreground color for text through slstatus using ^fg(hex code without the #)text^fg(). bg coloring and middle mouse functionality can be added if you uncomment that part of dwlb.c
+
+## Other Configurations
+
+- bg, the bg folder has a few wallpapers that can be set through the scripts/setbg script
+- cava, cava config that matches the nvim gruvbox theme
+- ncmpcpp, music player configuration, mostly derived from lukesmith, just like mpd and newsboat
+- nvim, contains both lua and vimscript version, has gruvbox colors as well as many other features
+- zathura, the zathura configuration that works best for me
+- zsh, zsh-plugins for fast-syntax-highlighting and autosuggestions with zsh
+
+## Usage
+
+Simply compile these programs and put the config files in the .config directory.
+
+To run dwm, append 'exec dwm' to your .\*profile.
+
+For dwl simply use the default .\*profile.
+
+1. Legacy Xorg Configs
+  - <details>
+    <pre>
+## Patches Applied
 
 I applied the following patches to dwm:
 
@@ -48,7 +82,7 @@ slstatus comes as it is and dwmblocks is purely luke smith's build with a new va
 - Xinerama for dwm
 - any font patched that is patched with the nerd font symbols, only reason I use a nerd fonts is for the arch logo and the cooler retro cpu character, you can get away with font-awesome
 
-## Other configurations
+## Other Configurations
 
 - alacritty, Very simple config file, I just set the colors to match the rest of my setup and the font/font size
 - my startup script with xinit
@@ -85,3 +119,5 @@ To run dwm simply use my .xinitrc script or append "exec dwm" to yours after com
 - [x] Rounded corners on all windows, pretty sure this build has it if you disable the border px to 0 and run a compositor like picom
 - [x] Give dwmblocks and the bar some color
 - [x] init.vim to init.lua, *mostly done*. Only way I managed to do this is via NvChad or other distributions that come ready, but as you can see on /images/{lua.png,vimscript.png}, the difference is that of 5ms when booting into vim 100 times. Lua is a fun language to learn and perhaps useful in the future as more software is written with it or at least with it in mind, but for now I see no reason to switch over to init.lua. It is quite a pain to bridge the gap when you know nothing about lua and such a minimal performance gain on modern hardware is not worth days and days of my life, learning a bit of lua is surely worth it though
+</pre>
+</details>

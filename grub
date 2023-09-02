@@ -2,8 +2,11 @@
 
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR="Artix"
+GRUB_DISTRIBUTOR="Gentoo"
 GRUB_DISABLE_SUBMENU=u
 GRUB_SAVEDEFAULT=true
-GRUB_CMDLINE_LINUX_DEFAULT="fsck.mode=skip loglevel=0 console=tty2 udev.log_level=0 vt.global_cursor_default=0 mitigations=off nowatchdog libahci.ignore_sss=1 msr.allow_writes=on pcie_aspm=force module.sig_unenforce intel_idle.max_cstate=1 cryptomgr.notests initcall_debug intel_iommu=igfx_off no_timer_check noreplace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 tsc=reliable"
+GRUB_CMDLINE_LINUX_DEFAULT="processor.ignore_ppc=1 amdgpu.ppfeaturemask=0xffffffff ec_sys.write_support=1 fsck.mode=skip loglevel=0 console=tty2 udev.log_level=0 vt.global_cursor_default=0 mitigations=off nowatchdog libahci.ignore_sss=1 msr.allow_writes=on pcie_aspm=force module.sig_unenforce initcall_debug no_timer_check noreplace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 tsc=reliable elevator=none"
 GRUB_DISABLE_RECOVERY=true
+
+# Comment if you don't want GRUB to pass "root=PARTUUID=xxx" parameter to kernel
+GRUB_DISABLE_LINUX_PARTUUID=false

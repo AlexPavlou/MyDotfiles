@@ -42,10 +42,10 @@ set showmatch               " show matching
 set ignorecase              " case insensitive
 set hlsearch                " highlight search
 set gdefault                " Enable flag g in replace command like :%s/a/b/
-set tabstop=4               " number of columns occupied by a tab
-set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set tabstop=8               " number of columns occupied by a tab
+set softtabstop=8           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
-set shiftwidth=4            " width for autoindents
+set shiftwidth=8            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 filetype plugin indent on   "allow auto-indenting depending on file type
