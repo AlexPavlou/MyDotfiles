@@ -40,7 +40,6 @@ For dwl simply use the default .\*profile.
 
 # 1. Legacy Xorg Configs
 <detail>
-<pre>
 ## Patches Applied
 
 I applied the following patches to dwm:
@@ -118,5 +117,4 @@ To run dwm simply use my .xinitrc script or append "exec dwm" to yours after com
 - [x] Rounded corners on all windows, pretty sure this build has it if you disable the border px to 0 and run a compositor like picom
 - [x] Give dwmblocks and the bar some color
 - [x] init.vim to init.lua, *mostly done*. Only way I managed to do this is via NvChad or other distributions that come ready, but as you can see on /images/{lua.png,vimscript.png}, the difference is that of 5ms when booting into vim 100 times. Lua is a fun language to learn and perhaps useful in the future as more software is written with it or at least with it in mind, but for now I see no reason to switch over to init.lua. It is quite a pain to bridge the gap when you know nothing about lua and such a minimal performance gain on modern hardware is not worth days and days of my life, learning a bit of lua is surely worth it though
-</pre>
 </details>
