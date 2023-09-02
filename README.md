@@ -39,7 +39,7 @@ To run dwm, append 'exec dwm' to your .\*profile.
 For dwl simply use the default .\*profile.
 
 # 1. Legacy Xorg Configs
-<details open>
+<details>
 ## Patches Applied
 
 I applied the following patches to dwm:
