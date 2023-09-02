@@ -28,7 +28,7 @@ static const char *const autostart[] = {
         "sh", "/home/alex/.scripts/wifi.sh", NULL,
         "sh", "/home/alex/.scripts/sound.sh", NULL,
         "sh", "/home/alex/.scripts/bat_stuff.sh", NULL,
-        "", "swayidle -w timeout 60 'swaylock -f -c 000000'", NULL,
+        "setsid", "swayidle -w timeout 60 'swaylock -f -c 000000'", NULL,
         "", "light -S 80", NULL,
         NULL /* terminate */
 };
