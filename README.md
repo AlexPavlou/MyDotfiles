@@ -2,7 +2,6 @@
 Simple configurations I use on my daily driver
 
 ![image1](images/wayland.jpg)
-![image2](images/wayland2.jpg)
 
 ## What even is this?
 
@@ -12,13 +11,13 @@ Through this repository I used to provide multiple custom builds of suckless pro
 
 I applied the following patches to dwl:
 
-- [https://github.com/djpohly/dwl/wiki/autostart](autostart patch), simple function to start apps after dwl is set up
-- [https://github.com/djpohly/dwl/wiki/keycodes](keycodes patch), makes it so that input is independent from keyboard layout
-- [https://github.com/djpohly/dwl/wiki/keymapnotify](keymapnotify patch), outputs current layout to /etc/dwl-keymap file, useful for showing your current layout on slstatus
-- [https://github.com/djpohly/dwl/wiki/monitorconfig](monitorconfig patch), adds more extensive monitor configuration in config.h
-- [https://github.com/djpohly/dwl/wiki/XF86keysym](XF86keysym patch), uses the /usr/include/X11/XF86keysym.h header file to change volume via the appropiate keys
-- [https://github.com/djpohly/dwl/wiki/xcursor](xcursor patch), adds xcursor functionality, meaning that it hides the cursor after x seconds of inactivity
-- [https://github.com/djpohly/dwl/wiki/vanitygaps](vanitygaps patch), adds gaps to windows
+- [autostart patch](https://github.com/djpohly/dwl/wiki/autostart), simple function to start apps after dwl is set up
+- [keycodes patch](https://github.com/djpohly/dwl/wiki/keycodes), makes it so that input is independent from keyboard layout
+- [keymapnotify patch](https://github.com/djpohly/dwl/wiki/keymapnotify), outputs current layout to /etc/dwl-keymap file, useful for showing your current layout on slstatus
+- [monitorconfig patch](https://github.com/djpohly/dwl/wiki/monitorconfig), adds more extensive monitor configuration in config.h
+- [XF86keysym patch](https://github.com/djpohly/dwl/wiki/XF86keysym), uses the /usr/include/X11/XF86keysym.h header file to change volume via the appropiate keys
+- [xcursor patch](https://github.com/djpohly/dwl/wiki/xcursor), adds xcursor functionality, meaning that it hides the cursor after x seconds of inactivity
+- [vanitygaps patch](https://github.com/djpohly/dwl/wiki/vanitygaps), adds gaps to windows
 
 dwlb comes as it is with parts of the bloat cut out, I removed all pointless functionality and only left -status-stdin and -status, as well as the ability to set the foreground color for text through slstatus using ^fg(hex code without the #)text^fg(). bg coloring and middle mouse functionality can be added if you uncomment that part of dwlb.c
 
@@ -39,9 +38,9 @@ To run dwm, append 'exec dwm' to your .\*profile.
 
 For dwl simply use the default .\*profile.
 
-1. Legacy Xorg Configs
-  - <details>
-    <pre>
+# 1. Legacy Xorg Configs
+<detail>
+<pre>
 ## Patches Applied
 
 I applied the following patches to dwm:
