@@ -40,6 +40,8 @@ For dwl simply use the default .\*profile.
 
 # 1. Legacy Xorg Configs
 <details>
+<summary>X Configurations</summary>
+  
 ## Patches Applied
 
 I applied the following patches to dwm:
