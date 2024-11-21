@@ -1,3 +1,0 @@
-b="$(setxkbmap -query | grep -oP 'layout:\s*\K\w+')"
-kb="$(echo $b | tr a-z A-Z)"
-printf " $kb"

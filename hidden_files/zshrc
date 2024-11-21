@@ -1,0 +1,94 @@
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd extendedglob nomatch
+unsetopt beep notify
+
+autoload -U colors && colors	# Load colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
+setopt autocd		# Automatically cd into typed directory.
+
+stty stop undef		# Disable ctrl-s to freeze terminal.
+
+setopt interactive_comments
+
+#Aliases
+alias -g rm="trash put"
+alias -g rf="/home/alex/.scripts/trash.sh restore"
+alias -g rt="/home/alex/.scripts/trash.sh empty"
+alias -g dt="trash empty all"
+
+alias -g grep="grep --color=auto"
+alias -g ls="eza -h --icons=always --color=auto"
+alias -g ll="eza --icons=always --color=auto -lh"
+alias -g ip="ip -color=auto"
+alias -g cp="cp -riv"
+alias -g lf="lfrun"
+alias -g newsboat="newsboat -r"
+alias -g porupdate="doas emaint -a sync;doas emerge -avuqDN @world"
+alias -g porclean="doas emerge -c;doas eix-test-obsolete;doas eclean -d distfiles;doas eclean -d packages"
+alias -g c="clear"
+alias -g z="fzf"
+alias -g cat="bat"
+alias -g mkdir="mkdir -p"
+alias -g cvim="nvim -u ~/.config/nvim-code/init.lua"
+
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+bindkey '^H' backward-kill-word
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select () {
+    case $KEYMAP in
+        vicmd) echo -ne '\e[1 q';;      # block
+        viins|main) echo -ne '\e[5 q';; # beam
+    esac
+}
+
+export LANG=en_US.UTF-8
+export ZSH_COMPDUMP=$ZDOTDIR/cache/.zcompdump-$HOST
+bindkey -s '^o' '^ulfcd\n'
+bindkey -s '^a' '^ubc -lq\n'
+bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
+bindkey '^[[P' delete-char
+autoload -Uz compinit
+bindkey -r "^W"
+compinit
+
+# History
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+zle_highlight+=(paste:none)
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
+source ~/.config/zsh/zsh-plugins/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source ~/.config/zsh/zsh-plugins/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.config/zsh/zsh-plugins/plugins/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.config/zsh/zsh-plugins/plugins/zsh-completions/zsh-completions.plugin.zsh

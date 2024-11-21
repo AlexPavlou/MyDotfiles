@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# profile file. Runs on login. Environmental variables are set here.
+
+unsetopt PROMPT_SP
+
+# Default programs:
+export EDITOR="nvim"
+export TERMINAL="foot"
+export BROWSER="firefox-bin"
+
+# hacks to get as many apps as possible to run wayland-natively
+export "QT_QPA_PLATFORM"="wayland-egl" # required by qt5 applications
+export "MOZ_ENABLE_WAYLAND"=1
+export "KITTY_ENABLE_WAYLAND"=1
+export "_JAVA_AWT_WM_NONREPARENTING"=1 # to fix glitches for java UI apps under xwayland
+export "LIBVA_DRIVER_NAME"="radeonsi"
+export "LIBVA_DRIVERS_PATH"="/usr/lib/x86_64-linux-gnu/dri/"
+export "VDPAU_DRIVER"="radeonsi"
+export FZF_DEFAULT_OPTS="--bind ctrl-a:select-all,ctrl-d:deselect-all"
+
+dbus-run-session Hyprland

@@ -1,0 +1,210 @@
+#   ██████╗ ██╗   ██╗███╗   ██╗███████╗████████╗
+#   ██╔══██╗██║   ██║████╗  ██║██╔════╝╚══██╔══╝
+#   ██║  ██║██║   ██║██╔██╗ ██║███████╗   ██║
+#   ██║  ██║██║   ██║██║╚██╗██║╚════██║   ██║
+#   ██████╔╝╚██████╔╝██║ ╚████║███████║   ██║
+#   ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝
+
+[global]
+
+#----------------------
+#   DISPLAY
+#----------------------
+
+monitor = 0
+
+follow = mouse
+
+per_monitor_dpi = false
+
+#----------------------
+#   GENERAL PROPERTIES
+#----------------------
+
+origin = bottom-right
+
+stack_duplicates = true
+hide_duplicate_count = false
+
+show_indicators = no
+indicate_hidden = no
+
+title = Dunst
+class = Dunst
+timeout = 1000
+
+browser = /usr/bin/firefox-bin
+
+always_run_script = true
+
+startup_notification = false
+
+verbosity = mesg
+
+force_xinerama = false
+
+#----------------------
+#   FRAME PROPERTIES
+#----------------------
+
+shrink = no
+
+width=600
+notification_height = 0
+separator_height = 3
+line_height = 1
+frame_width = 2
+
+padding = 15
+horizontal_padding = 18
+
+
+sort = yes
+
+progress_bar = true
+progress_bar_height = 9
+progress_bar_frame_width = 2
+
+#----------------------
+#   FORMAT
+#----------------------
+
+markup = full
+
+corner_radius = 10
+
+format = "%s\n%b"
+
+alignment = center
+
+bounce_freq = 0
+
+show_age_threshold = 60
+
+word_wrap = no
+
+ignore_newline = true
+
+origin = bottom-right
+
+transparency = 0
+
+idle_threshold = 120
+
+ellipsize = end
+
+ignore_newline = no
+
+font = JetBrainsMono 12
+
+#----------------------
+#   ICONS
+#----------------------
+
+icon_position = left
+
+min_icon_size = 48
+max_icon_size = 64
+
+icon_path = /usr/share/icons/dunst/system:/usr/share/icons/dunst/apps
+
+#----------------------
+#   HISTORY
+#----------------------
+
+sticky_history = yes
+
+history_length = 20
+
+#----------------------
+#   MOUSE INTERACTION
+#----------------------
+
+mouse_left_click = do_action
+mouse_middle_click = close_all
+mouse_right_click = close_current
+
+#----------------------
+#   URGENCY LEVELS
+#----------------------
+
+[global]
+frame_color = "#cba6f7"
+separator_color= frame
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#f38ba8"
+
+#----------------------
+#   CUSTOM RULES
+#----------------------
+
+# •• System General
+
+[system]
+appname = System
+new_icon = /usr/share/icons/dunst/system/system.svg
+
+[theme]
+appname = Theme
+new_icon = /usr/share/icons/dunst/system/theme.svg
+
+[sxhkd]
+appname = System
+summary = sxhkd
+new_icon = /usr/share/icons/dunst/system/sxhkd.svg
+
+[dunst_rel]
+appname = System
+summary = dunst
+body = "Restarted"
+new_icon = /usr/share/icons/dunst/system/dunst_restart.svg
+
+[welcome]
+appname = System
+summary = Welcome
+format = "<b>%s,\n%b</b>"
+new_icon = /usr/share/icons/dunst/misc/face
+[updates_yes]
+appname = System
+summary = Updates
+body = Available*
+new_icon = /usr/share/icons/dunst/system/updates_yes.svg
+[updates_no]
+appname = System
+summary = Updates
+body = "All packages synced"
+new_icon = /usr/share/icons/dunst/system/updates_no.svg
+
+[dnd_on]
+appname = System
+summary = dunst
+body = "DND Enabled"
+new_icon = /usr/share/icons/dunst/system/dnd_on.svg
+[dnd_off]
+appname = System
+summary = dunst
+body = "DND Disabled"
+new_icon = /usr/share/icons/dunst/system/dnd_off.svg
+
+[bluetooth]
+appname = blueman
+new_icon = /usr/share/icons/dunst/system/bluetooth_on.svg
+[bluetooth_conn]
+appname = blueman
+body = *Connected
+new_icon = /usr/share/icons/dunst/system/bluetooth_paired.svg
+[bluetooth_disc]
+appname = blueman
+body = *Disconnected
+new_icon = /usr/share/icons/dunst/system/bluetooth_off.svg
