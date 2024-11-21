@@ -1,4 +1,5 @@
 <h1 align="center">MyDotfiles - Hyprland Catppuccin</h1>
+
 > Simple configurations I use on my daily driver
 
 ![image1](images/gentoo-wayland.png)
